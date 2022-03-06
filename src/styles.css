@@ -1,0 +1,17 @@
+html, body { 
+	height: 100%; 
+}
+body { 
+	margin: 0; 
+	font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.full-calendar a {
+	color: black;
+	text-decoration-line: none;
+
+}
