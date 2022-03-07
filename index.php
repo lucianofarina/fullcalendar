@@ -8,9 +8,8 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $servidor = "localhost"; $usuario = "root"; $contrasenia = ""; $nombreBaseDatos = "db_juridico_web";
 $dbh = new mysqli($servidor, $usuario, $contrasenia, $nombreBaseDatos);
 
-
-if ($_GET["action"] == "pjnguidecourstlist"){
-	
+if ($_GET["action"] == "pjnguidecourstlist")
+{	
 	$sql = mysqli_query($dbh,"SELECT * FROM guia ");
 
 	if(mysqli_num_rows($sql) > 0)
@@ -22,11 +21,10 @@ if ($_GET["action"] == "pjnguidecourstlist"){
 	{ 
 		echo json_encode([["success"=>0]]); 
 	}
-
 }
 */
-if ($_GET["action"] == "calendarevent"){
-	
+if ($_GET["action"] == "calendarevent")
+{
 	$calendarEvents = array(
 		['start' => '2022-02-28T00:00:00', 'end' => '2022-03-01T24:00:00', 'title' => 'Carnaval', 'color' => '#f1e60d'],
 		['start' => '2022-03-02T07:30:00', 'end' => '2022-03-11T07:30:00', 'title' => 'Traslado (Impugnaciones, memorial)'],
@@ -39,14 +37,7 @@ if ($_GET["action"] == "calendarevent"){
 		['start' => '2022-03-02T14:30:00', 'end' => '2022-03-10T14:30:00', 'title' => 'Testimonial. Fragola.']
 	);
 	echo json_encode($calendarEvents);
-	
-
 }
-
-
-
-
-
 
 ?>
 
