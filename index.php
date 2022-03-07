@@ -4,36 +4,6 @@ header("Access-Control-Allow-Headers: access");
 header("Access-Control-Allow-Methods: GET,POST");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
-/*
-include('config.php');
-try
-{
-	$dbh = new PDO('mysql:host='.BD_SERVIDOR.';dbname='.BD_NOMBRE.';charset=utf8', BD_USUARIO, BD_PASSWORD);
-	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
-{
-	echo "ERROR: " . $e->getMessage();
-	
-} 
-
-
-$sql = 'SELECT * FROM guia';
-
-echo '<table>';
-foreach ($dbh->query($sql) as $row)
-{
-	echo '<tr>';
-	print '<td>'. $row['DEPENDENCIA'] . "</td>";
-	print '<td>'. $row['CARGO'] . "</td>";
-	print '<td>'. $row['EMAIL'] . "</td>";
-	print '<td>'. $row['DOMICILIO'] . "</td>";
-	echo '</tr>';
-}
-echo '</table>';
-*/
-
 $servidor = "localhost"; $usuario = "root"; $contrasenia = ""; $nombreBaseDatos = "db_juridico_web";
 $dbh = new mysqli($servidor, $usuario, $contrasenia, $nombreBaseDatos);
 
